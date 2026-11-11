@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f7f5ef">
+<title>Dәм — вкус, который объединяет</title>
+<style>
+:root{--bg:#f7f5ef;--ink:#1f2a24;--green:#1d4d3b;--gold:#b8862f;--card:#fffdf8;--line:#e3ddcc}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Georgia,"Times New Roman",serif;line-height:1.6}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);z-index:10}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.logo{font-size:1.5rem;font-weight:700;color:var(--green)}
+nav{display:flex;gap:20px;font-family:system-ui,sans-serif;font-size:.95rem}
+nav a:hover{color:var(--gold)}
+.btn{display:inline-block;background:var(--green);color:#fff;border:0;border-radius:999px;padding:12px 24px;font:600 1rem system-ui,sans-serif;cursor:pointer}
+.btn:hover{background:#163a2d}
+.btn.light{background:transparent;color:var(--green);border:1px solid var(--green)}
+.hero{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center;padding:56px 0}
+.hero h1{font-size:clamp(2.4rem,6vw,4.2rem);line-height:1.05;margin:0 0 16px;color:var(--green)}
+.hero p{max-width:46ch;font-size:1.15rem}
+.hero .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.hero img{border-radius:24px;aspect-ratio:4/3;object-fit:cover;width:100%}
+.note{font-family:system-ui,sans-serif;color:#5b6a62;font-size:.9rem;margin-top:16px}
+section{padding:56px 0}
+h2{font-size:clamp(1.8rem,4vw,2.6rem);margin:0 0 8px;color:var(--green)}
+.sub{color:#5b6a62;margin:0 0 32px}
+.menu{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
+.dish{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.dish img{aspect-ratio:3/2;object-fit:cover;width:100%}
+.dish div{padding:16px}
+.dish h3{margin:0 0 4px}
+.dish p{margin:0 0 8px;font-size:.95rem;color:#4a574f}
+.price{font-family:system-ui,sans-serif;font-weight:700;color:var(--gold)}
+.story{background:var(--green);color:#f3eee0}
+.story h2{color:#f3eee0}
+.story p{max-width:62ch}
+.reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+blockquote{margin:0;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px}
+blockquote footer{font-family:system-ui,sans-serif;font-size:.9rem;color:#5b6a62;margin-top:10px}
+.stars{color:var(--gold)}
+.contacts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;font-family:system-ui,sans-serif}
+.contacts b{display:block;font-size:.85rem;color:#5b6a62;font-weight:600}
+footer.site{border-top:1px solid var(--line);padding:24px 0;font-family:system-ui,sans-serif;font-size:.9rem;color:#5b6a62}
+dialog{border:0;border-radius:20px;padding:28px;max-width:420px;width:calc(100% - 32px);background:var(--card)}
+dialog::backdrop{background:rgba(0,0,0,.5)}
+dialog h2{font-size:1.6rem}
+label{display:block;font:600 .9rem system-ui,sans-serif;margin-top:12px}
+input,select,textarea{width:100%;margin-top:4px;padding:10px;border:1px solid var(--line);border-radius:10px;font:1rem system-ui,sans-serif;background:#fff}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.close{float:right;background:none;border:0;font-size:1.6rem;cursor:pointer}
+.ok{display:none;background:#e5f1ea;border-radius:10px;padding:12px;margin-top:16px;font-family:system-ui,sans-serif}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+@media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:32px}nav{display:none}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="logo" href="#home">Dәм</a>
+    <nav>
+      <a href="#menu">Меню</a><a href="#story">Наша история</a><a href="#reviews">Отзывы</a><a href="#contacts">Контакты</a>
+    </nav>
+    <button class="btn" data-book>Забронировать</button>
+  </div>
+</header>
+
+<main id="home">
+  <div class="wrap hero">
+    <div>
+      <p class="note">Алматы, с 2018 года</p>
+      <h1>Вкус, который собирает вместе.</h1>
+      <p>Готовим по семейным рецептам, накрываем щедро и встречаем как дома. Заходите — дастархан уже ждёт.</p>
+      <div class="actions">
+        <button class="btn" data-book>Забронировать столик</button>
+        <a class="btn light" href="#menu">Смотреть меню</a>
+      </div>
+      <p class="note"><span class="stars">★★★★★</span> 4.9 из 5 по отзывам гостей Алматы</p>
+    </div>
+    <img src="https://paint-shop-zy7f5.ship.place/images/hero-besh.jpg" alt="Бешбармак с кониной" width="800" height="600">
+  </div>
+
+  <section id="menu">
+    <div class="wrap">
+      <h2>Наше меню</h2>
+      <p class="sub">Рецепты, которые передают из поколения в поколение.</p>
+      <div class="menu">
+        <article class="dish"><img src="https://paint-shop-zy7f5.ship.place/images/beshbarmak.jpg" alt="Бешбармак" loading="lazy"><div><h3>Бешбармак</h3><p>Тонкое тесто, нежная конина и наваристый сорпа.</p><span class="price">4 900 ₸</span></div></article>
+        <article class="dish"><img src="https://paint-shop-zy7f5.ship.place/images/baursak.jpg" alt="Бауырсақ" loading="lazy"><div><h3>Бауырсақ</h3><p>Золотистые кусочки домашнего теста — к чаю, каймаку и мёду.</p><span class="price">1 200 ₸</span></div></article>
+        <article class="dish"><img src="https://paint-shop-zy7f5.ship.place/images/kazy.jpg" alt="Қазы-қарта" loading="lazy"><div><h3>Қазы-қарта</h3><p>Традиционная конская колбаса, тонкая нарезка и свежий лук.</p><span class="price">5 600 ₸</span></div></article>
+        <article class="dish"><img src="https://paint-shop-zy7f5.ship.place/images/kuyrdak.jpg" alt="Қуырдақ" loading="lazy"><div><h3>Қуырдақ</h3><p>Обжаренное мясо, картофель и лук — сытно, просто, по-домашнему.</p><span class="price">3 800 ₸</span></div></article>
+        <article class="dish"><img src="https://paint-shop-zy7f5.ship.place/images/manty.jpg" alt="Манты по-казахски" loading="lazy"><div><h3>Манты по-казахски</h3><p>Пышное тесто, сочная мясная начинка и домашняя сметана.</p><span class="price">2 900 ₸</span></div></article>
+        <article class="dish"><img src="https://paint-shop-zy7f5.ship.place/images/shubat.jpg" alt="Шұбат" loading="lazy"><div><h3>Шұбат</h3><p>Прохладный ферментированный напиток из верблюжьего молока.</p><span class="price">1 400 ₸</span></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="story" class="story">
+    <div class="wrap">
+      <h2>У каждого вкуса есть своя история</h2>
+      <p>Когда-то наша әже собирала всю семью за большим столом. В центре всегда был бешбармак, на краю — горячие баурсаки, а рядом звучали разговоры до позднего вечера.</p>
+      <p>Мы открыли Dәм, чтобы сохранить это чувство. Здесь бережно готовят по рецептам семьи и всегда оставляют место ещё для одного гостя.</p>
+      <p><em>Келіңіз, төрлетіңіз! Заходите, будьте как дома.</em></p>
+    </div>
+  </section>
+
+  <section id="reviews">
+    <div class="wrap">
+      <h2>Тёплые слова гостей</h2>
+      <p class="sub">Что говорят те, кто уже сидел за нашим дастарханом.</p>
+      <div class="reviews">
+        <blockquote><span class="stars">★★★★★</span><p>Пришли большой семьёй — и будто оказались в гостях у старых друзей. Бешбармак невероятный, а баурсаки исчезли за минуту.</p><footer>Алия С., Алматы</footer></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacts">
+    <div class="wrap">
+      <h2>Как нас найти</h2>
+      <p class="sub">Заходите на обед, оставайтесь на ужин.</p>
+      <div class="contacts">
+        <div><b>Адрес</b><a href="https://maps.google.com/?q=Кабанбай+батыра+89+Алматы">Алматы, ул. Кабанбай батыра, 89</a></div>
+        <div><b>Часы работы</b>Каждый день, 11:00–23:00</div>
+        <div><b>Бронирование</b><a href="tel:+77273105555">+7 727 310 55 55</a></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site"><div class="wrap">© 2026 Dәм. Все права защищены.</div></footer>
+
+<dialog id="book">
+  <button class="close" aria-label="Закрыть" onclick="book.close()">×</button>
+  <h2>Столик в Dәм</h2>
+  <form id="f" method="dialog">
+    <div class="row">
+      <label>Дата<input type="date" required></label>
+      <label>Время<select><option>12:00</option><option>13:30</option><option>15:00</option><option>17:00</option><option>18:30</option><option>20:00</option></select></label>
+    </div>
+    <label>Количество гостей<select><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select></label>
+    <label>Ваше имя<input type="text" required></label>
+    <label>Телефон<input type="tel" required></label>
+    <label>Пожелание (необязательно)<textarea rows="2"></textarea></label>
+    <p style="margin-top:16px"><button class="btn" type="submit">Подтвердить бронь</button></p>
+    <div class="ok" id="ok">Спасибо! Это демо-форма: данные никуда не отправляются.</div>
+  </form>
+</dialog>
+
+<script>
+const book=document.getElementById('book'),f=document.getElementById('f'),ok=document.getElementById('ok');
+document.querySelectorAll('[data-book]').forEach(b=>b.addEventListener('click',()=>{ok.style.display='none';book.showModal()}));
+f.addEventListener('submit',e=>{e.preventDefault();ok.style.display='block'});
+</script>
+</body>
+</html>
